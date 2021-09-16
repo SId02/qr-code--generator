@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./css/bulma.css">
+     
+      <style>
+         .qrcode > img {
+	background-color: #fff;
+	margin: 0 auto;
+} 
+      </style>
+      <title>QR Code Generator</title>
+   </head>
+   <body>
+      <!--  -->
+      <section class="section">
+         <div class="container">
+            <h1 class="title has-text-centered">
+               QR Code Generator 
+               </h1>
+         </div>
+         <section class="section main" id="main">
+            <div class="container has-text-centered">
+               <div class="columns is-centered">
+                  <div class="column is-5 is-4-desktop">
+                     <form>
+                        <div class="field">
+                           <div class="control">
+                              <input class="input urlInput" type="text" name="data" placeholder=" Type or Paste your Url" id="urlInput" value=""
+                                 autocomplete="false">
+                           </div>
+                        </div>
+                        <div class="field">
+                           <div class="control is-expanded">
+                              <button class="button is-primary is-outlined is-fullwidth" id="generateBtn">Generate QR Code</button>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <!--  -->
+               <div class="columns is-centered ">
+                  <div class="column is-5 is-4-desktop">
+                     <div class="card is-hidden is-dark" id="qrcard">
+                        <div class="card-content ">
+                           <div class="content qrcard" >
+                              <div class="qrcode has-text-centered m-5" id="qrcode"></div>
+                              <button class="button downloadBtn is-primary is-outlined" id="downloadBtn">
+                                 Download &nbsp;
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    >
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="7 10 12 15 17 10" />
+                                    <line x1="12" y1="15" x2="12" y2="3" />
+                                 </svg>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </section>
+
+      <!-- footer -->
+      <footer class="footer  ">
+         <div class="container">
+            <p class="subtitle has-text-centered is-6"> QR-code using  <a href="https://github.com/davidshimjs/qrcodejs">API</a></p>
+         </div>
+      </footer>
+      <!-- footer ends  is-hidden is-invisible is-sr-only -->
+      <script src="./js/qrcode.js"></script>
+      <script src="./js/script.js"></script>
+   </body>
+</html>
