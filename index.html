@@ -5,12 +5,26 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="./css/bulma.css">
-     
       <style>
-         .qrcode > img {
-	background-color: #fff;
-	margin: 0 auto;
-} 
+		body{
+			min-height: 100vh;
+		}
+		button{
+			background:#6f42c1 !important;
+			color:#fff !important;
+		}
+		button:hover{
+			background:#9d7ed5 !important;
+		}
+	    qrcode > img {
+			background-color: #fff;
+			margin: 0 auto;
+		} 
+		footer{
+			border-top:2px solid #9d7ed5!important ;
+			margin-top: auto;
+		}
+
       </style>
       <title>QR Code Generator</title>
    </head>
@@ -35,7 +49,7 @@
                         </div>
                         <div class="field">
                            <div class="control is-expanded">
-                              <button class="button is-primary is-outlined is-fullwidth" id="generateBtn">Generate QR Code</button>
+                              <button class="button is-outlined is-fullwidth" id="generateBtn">Generate QR Code</button>
                            </div>
                         </div>
                      </form>
@@ -48,7 +62,7 @@
                         <div class="card-content ">
                            <div class="content qrcard" >
                               <div class="qrcode has-text-centered m-5" id="qrcode"></div>
-                              <button class="button downloadBtn is-primary is-outlined" id="downloadBtn">
+                              <button class="button downloadBtn  is-outlined" id="downloadBtn">
                                  Download &nbsp;
                                  <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -76,11 +90,13 @@
       </section>
 
       <!-- footer -->
-      <footer class="footer  ">
+	  <div class="container">
+      <footer class="footer">
          <div class="container">
             <p class="subtitle has-text-centered is-6"> QR-code using  <a href="https://github.com/davidshimjs/qrcodejs">API</a></p>
          </div>
       </footer>
+	    </div>
       <!-- footer ends  is-hidden is-invisible is-sr-only -->
       <script src="./js/qrcode.js"></script>
       <script src="./js/script.js"></script>
